@@ -184,7 +184,19 @@ const routes = {
     try {
       const { origin } = publicOrigin(req);
       const response = await vkPayments('/checkout', {
+        ui_mode: 'hosted_page',
         mode: 'subscription',
+        billing_address_collection: 'auto',
+        phone_number_collection: { enabled: true },
+        automatic_tax: { enabled: false },
+        allow_promotion_codes: false,
+        payment_method_collection: 'always',
+        submit_type: 'auto',
+        consent_collection: { terms_of_service: 'required', promotions: 'auto' },
+        name_collection: { individual: { enabled: true, optional: true }, business: { enabled: true, optional: true } },
+        saved_payment_method_options: { payment_method_save: 'enabled' },
+        integration_identifier: 'hosted_mobile_app_0001',
+        origin_context: 'mobile_app',
         items: [{ name: `Legislative Packet ${plan.name}`, amount: plan.amount, currency: 'usd', interval: plan.interval }],
         successUrl: `${origin}/?paid=1&plan=${plan.id}`,
         cancelUrl: `${origin}/?billing=cancelled`,
