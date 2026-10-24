@@ -41,13 +41,13 @@ export function WakingScreen({ state }: { state: NonNullable<WakingState> }) {
 }
 
 const styles = StyleSheet.create({
-  screen: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: '#0b0b12', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 32, zIndex: 100 },
+  screen: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: '#0a0a0a', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 32, zIndex: 100 },
   title: { color: '#fff', fontSize: 26, fontWeight: '700', marginTop: 24 },
   message: { color: '#9a9ab0', fontSize: 15, lineHeight: 21, textAlign: 'center', marginTop: 8, maxWidth: 320 },
-  track: { width: '70%', maxWidth: 260, height: 4, borderRadius: 2, backgroundColor: '#23233a', marginTop: 28, overflow: 'hidden' },
+  track: { width: '70%', maxWidth: 260, height: 4, borderRadius: 2, backgroundColor: '#404040', marginTop: 28, overflow: 'hidden' },
   fill: { height: 4, borderRadius: 2, backgroundColor: '#a78bfa' },
-  card: { marginTop: 40, alignSelf: 'stretch', maxWidth: 360, backgroundColor: '#15151f', borderRadius: 16, borderWidth: StyleSheet.hairlineWidth, borderColor: '#2c2c40', padding: 18, alignItems: 'center' },
+  card: { marginTop: 40, alignSelf: 'stretch', maxWidth: 360, backgroundColor: '#121212', borderRadius: 16, borderWidth: StyleSheet.hairlineWidth, borderColor: '#404040', padding: 18, alignItems: 'center' },
   cardText: { color: '#d8d8e8', fontSize: 15, lineHeight: 21, textAlign: 'center' },
-  cta: { marginTop: 14, backgroundColor: '#7c5cff', borderRadius: 12, paddingVertical: 12, paddingHorizontal: 20 },
-  ctaText: { color: '#fff', fontSize: 15, fontWeight: '600' },
+  cta: { marginTop: 14, backgroundColor: '#a78bfa', borderRadius: 12, paddingVertical: 12, paddingHorizontal: 20 },
+  ctaText: { color: '#0a0a0a', fontSize: 15, fontWeight: '600' },
 });
